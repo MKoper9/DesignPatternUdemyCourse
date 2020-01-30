@@ -2,8 +2,8 @@ package notification;
 
 import order.Order;
 
-public class MobileApplication {
-    public void updateOrderStatus(Order order) {
-        System.out.println("Aplikacja mobilna - Zamówienie numer: " + order.getOrderNumber() + " zmianiło status na: " + order.getOrderStatus());
+public class MobileApplication implements Observer {
+    public void update(Order order) {
+        System.out.println("Aplikacja mobilna - Zamówienie numer: " + order.getOrderNumber() + " zmieniło status na: " + order.getOrderStatus());
     }
 }

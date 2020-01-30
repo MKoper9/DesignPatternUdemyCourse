@@ -13,8 +13,16 @@ public class Main {
         MobileApplication mobileApplication = new MobileApplication();
         TextMessage textMessage = new TextMessage();
 
-        email.updateOrderStatus(order);
-        mobileApplication.updateOrderStatus(order);
-        textMessage.updateOrderStatus(order);
+        order.registerObserver(textMessage);
+        order.registerObserver(mobileApplication);
+        order.registerObserver(email);
+
+        order.notifyObservers();
+
+        System.out.println("______________________________");
+        order.changeOrderStatus(OrderStatus.ODEBRANE);
+        order.unregisterObserver(email);
+        System.out.println("______________________________");
+        order.changeOrderStatus(OrderStatus.WYSLANE);
     }
 }
