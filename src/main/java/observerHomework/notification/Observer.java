@@ -1,7 +1,7 @@
 package observerHomework.notification;
 
-import observer.order.Order;
+import observerHomework.WeatherForecast;
 
 public interface Observer {
-    void updateForecast(Order order);
+    void updateForecast(WeatherForecast weatherForecast);
 }

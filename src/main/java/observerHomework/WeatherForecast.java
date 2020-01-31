@@ -1,11 +1,12 @@
 package observerHomework;
 
+import observer.order.Order;
 import observerHomework.notification.Observer;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class WeatherForecast implements Observable {
+public class WeatherForecast implements Observable, Observer {
     private int temperature;
     private int pressure;
     private Set<Observer> registeredObservers = new HashSet<Observer>();
@@ -47,5 +48,10 @@ public class WeatherForecast implements Observable {
 
     public void setRegisteredObservers(Set<Observer> registeredObservers) {
         this.registeredObservers = registeredObservers;
+    }
+
+    @Override
+    public void updateForecast(Order order) {
+
     }
 }
