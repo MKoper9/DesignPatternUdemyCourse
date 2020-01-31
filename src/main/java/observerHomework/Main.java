@@ -1,5 +1,9 @@
 package observerHomework;
 
+import observerHomework.notification.InternetNews;
+import observerHomework.notification.RadioNews;
+import observerHomework.notification.TvNews;
+
 public class Main {
     public static void main(String[] args) {
         WeatherForecast weatherForecast = new WeatherForecast(25, 1003);
