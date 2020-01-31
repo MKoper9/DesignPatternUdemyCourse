@@ -1,6 +1,6 @@
-package notification;
+package observer.notification;
 
-import order.Order;
+import observer.order.Order;
 
 public class TextMessage implements Observer {
 

@@ -1,8 +1,10 @@
-import notification.Email;
-import notification.MobileApplication;
-import notification.TextMessage;
-import order.Order;
-import order.OrderStatus;
+package observer;
+
+import observer.notification.Email;
+import observer.notification.MobileApplication;
+import observer.notification.TextMessage;
+import observer.order.Order;
+import observer.order.OrderStatus;
 
 public class Main {
 

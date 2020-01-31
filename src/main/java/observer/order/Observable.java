@@ -1,6 +1,6 @@
-package order;
+package observer.order;
 
-import notification.Observer;
+import observer.notification.Observer;
 
 public interface Observable {
 
