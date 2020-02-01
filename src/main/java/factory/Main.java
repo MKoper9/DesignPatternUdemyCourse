@@ -1,7 +1,10 @@
 package factory;
 
+import factory.units.*;
+
 public class Main {
 
-    Unit tank = new Tank(200,0,200);
-    Unit infrantyMan = new Tank(100,0,100);
+    Factory factory =new UnitFactory();
+    Unit tank = factory.createUnit(UnitType.TANK);
+    Unit infrantyMan =factory.createUnit(UnitType.RIFLEMAN);
 }
