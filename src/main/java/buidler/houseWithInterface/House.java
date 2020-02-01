@@ -78,5 +78,4 @@ public class House {
                 ", garage='" + garage + '\'' +
                 '}';
     }
-
 }

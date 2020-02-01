@@ -107,12 +107,5 @@ public class House {
         public House build(){
             return new House(this);
         }
-
-
     }
-
-
-
-
-
 }

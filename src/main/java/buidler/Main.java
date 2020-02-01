@@ -26,7 +26,7 @@ public class Main {
         HouseDirector bigHouseDirector = new HouseDirector(bigHouseBuilder);
         bigHouseDirector.buildHouse();
 
-        
+
 
     }
 }
