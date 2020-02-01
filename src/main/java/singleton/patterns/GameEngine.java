@@ -5,7 +5,7 @@ public class GameEngine {
     private int hp=100;
     private String characterName = "";
 
-    private GameEngine instance;
+    private static GameEngine instance;
 
     public GameEngine() {
     }
@@ -18,7 +18,7 @@ public class GameEngine {
         }
     }
 
-    public GameEngine getInstance(){
+    public static GameEngine getInstance(){
         if(instance==null)
         {
             instance=new GameEngine();
