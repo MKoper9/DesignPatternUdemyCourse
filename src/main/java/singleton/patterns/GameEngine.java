@@ -1,7 +1,10 @@
 package singleton.patterns;
 
-public class GameEngine {
+import java.io.Serializable;
 
+public class GameEngine implements Serializable {
+
+    private static final long serialVersionUUID=123456789;
     private int hp=100;
     private String characterName = "";
 
@@ -26,5 +29,9 @@ public class GameEngine {
 //            }
 //        }
         return instance;
+    }
+
+    protected Object readResolve(){
+        return getInstance();
     }
 }
