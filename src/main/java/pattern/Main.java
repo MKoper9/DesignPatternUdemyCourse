@@ -5,14 +5,9 @@ import pattern.patternsAdapter.*;
 public class Main {
     public static void main(String[] args) {
 
-        ContinentalDevice radio = new ContinentalDevice(){
-            public void on(){
-                System.out.println("Play music");
-            }
-        };
-
         ContinentalSocket continentalSocket = new ContinentalSocket();
-        continentalSocket.plugIn(radio);
+
+        UKSocket ukSocket = new UKSocket();
 
         UKDevice ukRadio = new UKDevice() {
             public void powerOn() {
@@ -20,11 +15,16 @@ public class Main {
             }
         };
 
-        UKSocket ukSocket = new UKSocket();
-        ukSocket.plugIn(ukRadio);
+        ContinentalDevice continentalRadio = new ContinentalDevice() {
+            @Override
+            public void on() {
+                System.out.println("London calling from European Union");
+            }
+        };
 
-        UKToContinentalAdapter adapter = new UKToContinentalAdapter(ukRadio);
-
+        TwoWayAdapter adapter = new TwoWayAdapter(ukRadio, continentalRadio);
         continentalSocket.plugIn(adapter);
+        ukSocket.plugIn(adapter);
+
     }
 }
