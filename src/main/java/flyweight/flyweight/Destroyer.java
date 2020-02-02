@@ -1,25 +1,19 @@
 package flyweight.flyweight;
 
 public class Destroyer {
-    private String name;
-    private int hp;
-    private int armour;
-    private int damageDealt;
-    private int speed;
+
     private int x;
     private int y;
     private int hpLeft;
-    private int resouceCost;
+    private DestroyerUnitStats stats;
 
-    public Destroyer(String name, int hp, int armour, int damageDealt, int speed, int x, int y, int resouceCost) {
-        this.name = name;
-        this.hp = hp;
-        this.armour = armour;
-        this.damageDealt = damageDealt;
-        this.speed = speed;
+
+
+    public Destroyer(int x, int y) {
+        stats=UnitsStatsRepository.getDestroyerStats();
         this.x = x;
         this.y = y;
-        this.hpLeft = hp;
-        this.resouceCost=resouceCost;
+        this.hpLeft = stats.getHp();
+
     }
 }
