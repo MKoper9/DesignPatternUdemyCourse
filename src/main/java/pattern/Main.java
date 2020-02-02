@@ -1,9 +1,6 @@
 package pattern;
 
-import pattern.patternsAdapter.ContinentalDevice;
-import pattern.patternsAdapter.ContinentalSocket;
-import pattern.patternsAdapter.UKDevice;
-import pattern.patternsAdapter.UKSocket;
+import pattern.patternsAdapter.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,6 +23,8 @@ public class Main {
         UKSocket ukSocket = new UKSocket();
         ukSocket.plugIn(ukRadio);
 
-        continentalSocket.plugIn(ukRadio);
+        UKToContinentalAdapter adapter = new UKToContinentalAdapter(ukRadio);
+
+        continentalSocket.plugIn(adapter);
     }
 }
