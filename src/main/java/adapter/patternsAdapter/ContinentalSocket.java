@@ -1,4 +1,4 @@
-package pattern.patternsAdapter;
+package adapter.patternsAdapter;
 
 public class ContinentalSocket {
     public void plugIn(ContinentalDevice device){

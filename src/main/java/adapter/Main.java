@@ -1,6 +1,6 @@
-package pattern;
+package adapter;
 
-import pattern.patternsAdapter.*;
+import adapter.patternsAdapter.*;
 
 public class Main {
     public static void main(String[] args) {

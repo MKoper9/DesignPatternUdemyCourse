@@ -1,4 +1,4 @@
-package pattern.patternsAdapter;
+package adapter.patternsAdapter;
 
 public class UKToContinentalAdapter implements ContinentalDevice {
 
