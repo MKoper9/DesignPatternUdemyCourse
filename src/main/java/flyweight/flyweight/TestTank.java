@@ -5,10 +5,10 @@ public class TestTank {
     private int x;
     private int y;
     private int hpLeft;
-    private TestTankUnitStats stats;
+    private UnitStats stats;
 
     public TestTank(int x, int y) {
-;       stats = UnitsStatsRepository.getTestTanStats();
+;       this.stats = UnitsStatsRepository.getTestTanStats();
         this.x = x;
         this.y = y;
         this.hpLeft = stats.getHp();

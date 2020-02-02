@@ -1,22 +1,22 @@
 package flyweight.flyweight;
 
 public class UnitsStatsRepository {
-    private static DestroyerUnitStats destroyerUnitStats=new DestroyerUnitStats("Destroyer",500,80,100,20,1000);
-    private static RiflemanUnitStats riflemanUnitStats=new RiflemanUnitStats("Rifleman", 20,5,20,15,100);
-    private static TestTankUnitStats testTankUnitStats = new TestTankUnitStats("Tank", 100, 100, 50, 20, 500);
+    private static UnitStats destroyerUnitStats=new UnitStats("Destroyer",500,80,100,20,1000);
+    private static UnitStats riflemanUnitStats=new UnitStats("Rifleman", 20,5,20,15,100);
+    private static UnitStats testTankUnitStats = new UnitStats("Tank", 100, 100, 50, 20, 500);
 
     public UnitsStatsRepository() {
     }
 
-    public static DestroyerUnitStats getDestroyerStats(){
+    public static UnitStats getDestroyerStats(){
         return destroyerUnitStats;
     };
 
-    public static RiflemanUnitStats getRiflemanStats() {
+    public static UnitStats getRiflemanStats() {
         return riflemanUnitStats;
     }
 
-    public static TestTankUnitStats getTestTanStats() {
+    public static UnitStats getTestTanStats() {
         return testTankUnitStats;
     }
 }

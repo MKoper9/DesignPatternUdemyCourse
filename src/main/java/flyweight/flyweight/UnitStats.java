@@ -1,6 +1,6 @@
 package flyweight.flyweight;
 
-public class RiflemanUnitStats {
+public class UnitStats {
     private String name;
     private int hp;
     private int armour;
@@ -8,7 +8,7 @@ public class RiflemanUnitStats {
     private int speed;
     private int resouceCost;
 
-    public RiflemanUnitStats(String name, int hp, int armour, int damageDealt, int speed, int resouceCost) {
+    public UnitStats(String name, int hp, int armour, int damageDealt, int speed, int resouceCost) {
         this.name = name;
         this.hp = hp;
         this.armour = armour;
