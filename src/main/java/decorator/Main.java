@@ -9,10 +9,10 @@ public class Main {
         Terrain terrain = new Plain();
         Terrain terrain1 = new Hill();
 //        Terrain terrain2 = new SwampPlain();
-        Terrain terrain2 = new SwampDecorator(new Hill());
+        Terrain terrain2 = new RoadDecorator(new Plain());
 //        Terrain terrain3 = new SwampForrestPlain();
         Terrain terrain3 = new SwampDecorator(new Hill());
-        System.out.println("Swamp Hill "+terrain2.fuelCost());
+        System.out.println("RoadPlain "+terrain2.fuelCost());
     }
 
 }

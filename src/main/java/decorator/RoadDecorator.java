@@ -7,7 +7,7 @@ public class RoadDecorator extends TerrainDecorator {
 
     @Override
     public int fuelCost() {
-        return super.fuelCost()-10;
+        return terrain.fuelCost()-10;
     }
 
     @Override
