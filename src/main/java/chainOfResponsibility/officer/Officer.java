@@ -2,36 +2,16 @@ package chainOfResponsibility.officer;
 
 import chainOfResponsibility.message.Message;
 
-public class Officer {
+public abstract class Officer {
 
-    private boolean seregant;
-    private  boolean capitain;
-    private boolean general;
+    private Officer superiorOfficer;
+    public abstract void processMessage(Message message);
 
-    public void recieveMessage(Message message)
-    {
-        if(seregant){
-            System.out.println("Seregand recieved a message: "+message.getContent());
-        }else if(capitain)
-        {
-            System.out.println("Captain recieved a message: "+message.getContent());
-        }else if(general)
-        {
-            System.out.println("General recieved a message: "+message.getContent());
-        }else
-        {
-            System.out.println("Nobody recieved");
-        }}
-
-    public void setSergent(boolean seregant) {
-        this.seregant = seregant;
+    public Officer getSuperiorOfficer() {
+        return superiorOfficer;
     }
 
-    public void setCapitain(boolean capitain) {
-        this.capitain = capitain;
-    }
-
-    public void setGeneral(boolean general) {
-        this.general = general;
+    public void setSuperiorOfficer(Officer superiorOfficer) {
+        this.superiorOfficer = superiorOfficer;
     }
 }
