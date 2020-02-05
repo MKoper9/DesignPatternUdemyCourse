@@ -1,16 +1,32 @@
 package command.workshop;
 
-public class WorkshopApp {
-    private Robot robot;
+import command.workshop.command.Command;
 
-    public WorkshopApp(Robot robot) {
-        this.robot = robot;
+import java.util.ArrayList;
+import java.util.List;
+
+public class WorkshopApp {
+
+    private List<Command> commandQueue = new ArrayList<>();
+
+    public void addToQueue(Command command) {
+        commandQueue.add(command);
     }
 
-    public void run(){
-        robot.turnOn();
-        robot.cut();
-        robot.drill();
-        robot.turnOff();
+    public void run() {
+        if (commandQueue.isEmpty()) {
+            System.out.println("Queue has not any commands");
+;
+            }
+        for (Command command : commandQueue) {
+            command.execute();
+        }
+//        commandQueue.clear();
+    }
+
+    public void undoLastCommand() {
+        for (Command command : commandQueue) {
+            command.undo();
+        }
     }
 }
