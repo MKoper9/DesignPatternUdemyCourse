@@ -1,8 +1,5 @@
 package memento.smart_app;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class SmartApp {
 
     private Double version;
