@@ -17,8 +17,8 @@ public class OperatingSystem {
         return new OperatingSystemMemento(this.backupNumber, this.backupDate);
     }
 
-    public void load(){
-        System.out.println("backupNumer: "+this.backupNumber+" date: "+backupDate);
+    public void load(OperatingSystemMemento memento){
+        System.out.println("backupNumer: "+this.backupNumber+" date: "+this.backupDate);
     }
 
 }

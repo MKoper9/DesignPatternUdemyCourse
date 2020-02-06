@@ -2,13 +2,21 @@ package mementoHomework.app;
 
 import java.util.Date;
 
-public class OperatingSystemMemento {
+class OperatingSystemMemento {
 
     private int backupNumber;
     private Date backupDate;
 
-    public OperatingSystemMemento(int backupNumber, Date backupDate) {
+    OperatingSystemMemento(int backupNumber, Date backupDate) {
         this.backupNumber = backupNumber;
         this.backupDate = backupDate;
+    }
+
+    int getBackupNumber() {
+        return backupNumber;
+    }
+
+    Date getBackupDate() {
+        return backupDate;
     }
 }
