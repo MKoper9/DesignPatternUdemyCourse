@@ -1,23 +1,13 @@
 package fasade;
 
-import fasade.deliverybox.DeliveryBox;
-import fasade.deliverybox.DeliveryBoxSystem;
+import fasade.deliverybox.DeliveryBoxFasade;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        pickupPackage();
-
+        DeliveryBoxFasade deliveryBoxFasade = new DeliveryBoxFasade();
+        deliveryBoxFasade.pickupPackage();
     }
 
-    private static void pickupPackage() {
-        DeliveryBox deliveryBox = new DeliveryBox();
-        DeliveryBoxSystem deliveryBoxSystem = new DeliveryBoxSystem();
-
-        deliveryBox.getUserData();
-        if (deliveryBoxSystem.isUserDataValidated() && deliveryBoxSystem.isPaymentSecured()) {
-            deliveryBox.openBox();
-        }
-    }
 }
